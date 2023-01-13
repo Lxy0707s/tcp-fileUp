@@ -8,7 +8,7 @@ import time
 metrics = []
 remote_addr = '192.168.37.100'
 port = 8080
-filename = "/usr/local/data-path/data"
+filename = "/usr/local/tcp-fileUp/data"
 f = open(filename, 'rb')
 filesize = str(os.path.getsize(filename))
 path, file_name = os.path.split(filename)
@@ -38,7 +38,7 @@ def generate_metric(cost_time, codes):
     host = hostname()
     global metrics
     metric_json = {
-        "name": "tcp_1k_crossborder",
+        "name": "tcp_up_file_prob",
         "time": int(time.time()),
         "value": 0,
         "tags": {
